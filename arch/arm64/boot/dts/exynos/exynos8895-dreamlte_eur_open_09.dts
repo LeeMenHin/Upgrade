@@ -11051,6 +11051,8 @@ samsung,tmu_sensor_type = <0x0>;
   compatible = "samsung,sec_nad_balancer";
   status = "okay";
 
+  nad_balancer,timeout = <400>;
+
    qos {
     cl0 {
      qos,label="LIT";
@@ -11074,6 +11076,11 @@ samsung,tmu_sensor_type = <0x0>;
      qos,table=<1794000 1540000 1352000 1014000 845000 676000>;
     };
    };
+  sleep {
+
+   sleep,suspend_threshold = <1000>;
+   sleep,resume_threshold = <1000>;
+  };
  };
 
  argos {
